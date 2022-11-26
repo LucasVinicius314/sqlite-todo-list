@@ -8,9 +8,13 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const RepositoryProviders(
+    return RepositoryProviders(
       child: BlocProviders(
-        child: MaterialApp(home: HomePage()),
+        child: MaterialApp(
+          home: const HomePage(),
+          theme: ThemeData.dark(),
+          debugShowCheckedModeBanner: false,
+        ),
       ),
     );
   }
