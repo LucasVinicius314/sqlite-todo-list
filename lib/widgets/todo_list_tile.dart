@@ -12,12 +12,9 @@ class TodoListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CheckboxListTile(
-      contentPadding: EdgeInsets.symmetric(
-        vertical: 16.0,
-        horizontal: 16.0,
-      ),
       value: todo.getIsChecked,
       visualDensity: VisualDensity.comfortable,
+      contentPadding: const EdgeInsets.all(16.0),
       title: Text(
         todo.getTitle,
         style: Theme.of(context).textTheme.subtitle2,
